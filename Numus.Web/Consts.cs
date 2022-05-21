@@ -2,5 +2,5 @@
 
 public static class Consts
 {
-    public const string Brand = "Numus";
+    public const string Brand = "Nomis";
 }
