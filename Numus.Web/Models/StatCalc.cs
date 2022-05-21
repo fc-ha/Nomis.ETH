@@ -78,6 +78,14 @@ public class StatCalc
         }
 
         var intervals = GetTransactionsIntervals();
+        if (!intervals.Any())
+        {
+            return new WalletStats
+            {
+                NoData = true
+            };
+        }
+
         var monthAgo = DateTime.Now.AddMonths(-1);
 
         var soldTokens = _tokenTransfers.Where(x => x.From == _address);
